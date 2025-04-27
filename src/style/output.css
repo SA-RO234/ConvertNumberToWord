@@ -8,11 +8,8 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-700: oklch(50.5% 0.213 27.518);
-    --color-black: #000;
     --font-weight-normal: 400;
     --font-weight-bold: 700;
-    --default-transition-duration: 150ms;
-    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -190,38 +187,17 @@
   .flex {
     display: flex;
   }
-  .table {
-    display: table;
-  }
-  .h-\[40px\] {
-    height: 40px;
-  }
-  .h-\[50px\] {
-    height: 50px;
-  }
   .w-\[20\%\] {
     width: 20%;
   }
   .w-\[50\%\] {
     width: 50%;
   }
-  .w-\[80\%\] {
-    width: 80%;
-  }
   .w-full {
     width: 100%;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .transform {
-    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
-  }
   .cursor-text {
     cursor: text;
-  }
-  .resize {
-    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -246,20 +222,6 @@
   }
   .rounded-\[5px\] {
     border-radius: 5px;
-  }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
-  .border-2 {
-    border-style: var(--tw-border-style);
-    border-width: 2px;
-  }
-  .border-black {
-    border-color: var(--color-black);
-  }
-  .p-\[5px_50px\] {
-    padding: 5px 50px;
   }
   .pt-\[40px\] {
     padding-top: 40px;
@@ -293,18 +255,6 @@
   .text-red-700 {
     color: var(--color-red-700);
   }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
-  .transition {
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
-  }
   .select-none {
     -webkit-user-select: none;
     user-select: none;
@@ -318,7 +268,7 @@
 }
 .input {
   border: 2px solid transparent;
-  width: 20em;
+  width: 80% !important;
   height: 2.5em;
   padding-left: 0.8em;
   outline: none;
@@ -326,6 +276,9 @@
   background-color: #f3f3f3;
   border-radius: 10px;
   transition: all 0.5s;
+}
+#InputField {
+  font-size: 30px;
 }
 .input:hover, .input:focus {
   border: 2px solid #4a9dec;
@@ -377,51 +330,14 @@ button:hover:after {
   font-weight: 700 !important;
   font-family: "Cal Sans", sans-serif !important;
 }
-@property --tw-rotate-x {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-rotate-y {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-rotate-z {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-skew-x {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-skew-y {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-rotate-x: initial;
-      --tw-rotate-y: initial;
-      --tw-rotate-z: initial;
-      --tw-skew-x: initial;
-      --tw-skew-y: initial;
-      --tw-border-style: solid;
       --tw-font-weight: initial;
-      --tw-outline-style: solid;
     }
   }
 }
