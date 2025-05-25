@@ -160,8 +160,17 @@
   }
 }
 @layer utilities {
+  .absolute {
+    position: absolute;
+  }
+  .relative {
+    position: relative;
+  }
   .static {
     position: static;
+  }
+  .bottom-\[-50px\] {
+    bottom: -50px;
   }
   .container {
     width: 100%;
@@ -329,6 +338,14 @@ button:hover:after {
 .Show {
   font-weight: 700 !important;
   font-family: "Cal Sans", sans-serif !important;
+}
+.text-error {
+  font-family: "Hanuman", serif !important;
+}
+.border-error {
+  transition: 0 !important;
+  border: 2px solid red !important;
+  color: red !important;
 }
 @property --tw-font-weight {
   syntax: "*";

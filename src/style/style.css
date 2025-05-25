@@ -17,8 +17,8 @@
   border-radius: 10px;
   transition: all 0.5s;
 }
-#InputField{
-   @apply text-[30px];
+#InputField {
+  @apply text-[30px];
 }
 
 .input:hover,
@@ -81,4 +81,12 @@ button:hover:after {
   font-weight: 700 !important;
   font-family: "Cal Sans", sans-serif !important;
 }
+.text-error {
+  font-family: "Hanuman", serif !important;
+}
 
+.border-error {
+  transition: 0 !important;
+  border: 2px solid red !important;
+  color: red !important;
+}
