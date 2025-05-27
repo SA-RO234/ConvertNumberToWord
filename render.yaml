@@ -3,7 +3,7 @@ services:
     name: php-app
     env: docker
     plan: free
-    dockerfilePath: /Dockerfile
+    dockerfilePath: src/Dockerfile
     autoDeploy: true
     envVars:
       - key: PORT
