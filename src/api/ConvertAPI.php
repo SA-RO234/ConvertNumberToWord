@@ -2,9 +2,11 @@
 require_once "../functions/currencyConvert.php";
 require_once "../functions/enConvert.php";
 require_once "../functions/khConvert.php";
+
 header('Content-Type: application/json');
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: Content-Type");
+
 $data = json_decode(file_get_contents("php://input"), true);
 
 
@@ -34,7 +36,7 @@ if (isset($data['number']) && is_numeric($data['number'])) {
         'success' => true,
         'result' => $result,
         'history' => getHistory($historyFile)
-    ],JSON_UNESCAPED_UNICODE);
+    ], JSON_UNESCAPED_UNICODE);
 } else {
-    echo json_encode(['error' => "Error number that provide !"]);
+    echo json_encode(['success'=> false, 'error' => "Error number that provide !"]);
 }
