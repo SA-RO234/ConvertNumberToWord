@@ -34,7 +34,7 @@ if (isset($data['number']) && is_numeric($data['number'])) {
         'success' => true,
         'result' => $result,
         'history' => getHistory($historyFile)
-    ]);
+    ],JSON_UNESCAPED_UNICODE);
 } else {
     echo json_encode(['error' => "Error number that provide !"]);
 }

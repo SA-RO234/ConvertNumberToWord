@@ -88,7 +88,8 @@ function renderHistory(historyArr) {
       const number = parts[1].trim();
       let resultObj;
       try {
-        resultObj = JSON.parse(parts[2].trim());
+        const cleanedJSON = parts[2].trim().replace(/\\"/g, '"'); // 🛠️ FIX HERE
+        resultObj = JSON.parse(cleanedJSON);
       } catch (e) {
         resultObj = { english: "", khmer: "", dollar: "" };
       }

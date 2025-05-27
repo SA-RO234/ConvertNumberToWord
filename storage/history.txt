@@ -26,3 +26,5 @@
 2025-05-27 10:29:08 | 12 | {"english":"Twelve","khmer":"ដប់ពីរ","dollar":"$0.003"}
 2025-05-27 21:48:53 | 345 | {"english":"Three Hundred Forty-five","khmer":"បីរយសែសិបប្រាំ","dollar":"$0.08625"}
 2025-05-27 21:48:53 | 345 | {"english":"Three Hundred Forty-five","khmer":"បីរយសែសិបប្រាំ","dollar":"$0.08625"}
+2025-05-27 22:27:41 | 13 | {"english":"Thirteen","khmer":"ដប់បី","dollar":"$0.00325"}
+2025-05-27 22:28:54 | 13 | {"english":"Thirteen","khmer":"ដប់បី","dollar":"$0.00325"}
