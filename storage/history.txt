@@ -1,0 +1,26 @@
+2025-05-26 21:12:40 | 234 | {"english":"Two Hundred Thirty-four","khmer":"ពីររយសាមសិបបួន","dollar":"$0.0585"}
+2025-05-26 21:20:54 | 44543 | {"english":"Forty-four Thousand Five Hundred Forty-three","khmer":"បួនមុឺនបួនពាន់ប្រាំរយសែសិបបី","dollar":"$11.13575"}
+2025-05-26 21:23:09 | 3 | {"english":"Three","khmer":"បី","dollar":"$0.00075"}
+2025-05-26 21:23:21 | 43 | {"english":"Forty-three","khmer":"សែសិបបី","dollar":"$0.01075"}
+2025-05-26 21:24:57 | 34 | {"english":"Thirty-four","khmer":"សាមសិបបួន","dollar":"$0.0085"}
+2025-05-26 21:26:52 | 44 | {"english":"Forty-four","khmer":"សែសិបបួន","dollar":"$0.011"}
+2025-05-26 21:27:22 | 44546546546 | {"english":"Forty-four Billion Five Hundred Forty-six Million Five Hundred Forty-six Thousand Five Hundred Forty-six","khmer":"លេខមិនត្រឹមត្រូវ!","dollar":"$11136636.6365"}
+2025-05-26 21:46:35 | 45435 | {"english":"Forty-five Thousand Four Hundred Thirty-five","khmer":"បួនមុឺនប្រាំពាន់បួនរយសាមសិបប្រាំ","dollar":"$11.35875"}
+2025-05-26 21:53:25 | 43543 | {"english":"Forty-three Thousand Five Hundred Forty-three","khmer":"បួនមុឺនបីពាន់ប្រាំរយសែសិបបី","dollar":"$10.88575"}
+2025-05-26 21:54:54 | 4 | {"english":"Four","khmer":"បួន","dollar":"$0.001"}
+2025-05-26 21:57:27 | 787878788 | {"english":"Seven Hundred Eighty-seven Million Eight Hundred Seventy-eight Thousand Seven Hundred Eighty-eight","khmer":"លេខមិនត្រឹមត្រូវ!","dollar":"$196969.697"}
+2025-05-26 21:57:43 | 87878 | {"english":"Eighty-seven Thousand Eight Hundred Seventy-eight","khmer":"ប្រាំបីមុឺនប្រាំពីរពាន់ប្រាំបីរយចិតសិបប្រាំបី","dollar":"$21.9695"}
+2025-05-26 21:57:54 | 878789090 | {"english":"Eight Hundred Seventy-eight Million Seven Hundred Eighty-nine Thousand Ninety","khmer":"លេខមិនត្រឹមត្រូវ!","dollar":"$219697.2725"}
+2025-05-26 22:04:37 | 5 | {"english":"Five","khmer":"ប្រាំ","dollar":"$0.00125"}
+2025-05-26 23:43:50 | 2 | {"english":"Two","khmer":"ពីរ","dollar":"$0.0005"}
+2025-05-26 23:48:05 | 123 | {"english":"One Hundred Twenty-three","khmer":"មួយរយម្ភៃបី","dollar":"$0.03075"}
+2025-05-26 23:49:00 | 444 | {"english":"Four Hundred Forty-four","khmer":"បួនរយសែសិបបួន","dollar":"$0.111"}
+2025-05-26 23:49:39 | 123 | {"english":"One Hundred Twenty-three","khmer":"មួយរយម្ភៃបី","dollar":"$0.03075"}
+2025-05-26 23:53:46 | 999 | {"english":"Nine Hundred Ninety-nine","khmer":"ប្រាំបួនរយកៅសិបប្រាំបួន","dollar":"$0.24975"}
+2025-05-26 23:59:47 | 555 | {"english":"Five Hundred Fifty-five","khmer":"ប្រាំរយហាសិបប្រាំ","dollar":"$0.13875"}
+2025-05-27 00:06:55 | 456 | {"english":"Four Hundred Fifty-six","khmer":"បួនរយហាសិបប្រាំមួយ","dollar":"$0.114"}
+2025-05-27 00:08:37 | 44543 | {"english":"Forty-four Thousand Five Hundred Forty-three","khmer":"បួនមុឺនបួនពាន់ប្រាំរយសែសិបបី","dollar":"$11.13575"}
+2025-05-27 00:08:46 | 44543 | {"english":"Forty-four Thousand Five Hundred Forty-three","khmer":"បួនមុឺនបួនពាន់ប្រាំរយសែសិបបី","dollar":"$11.13575"}
+2025-05-27 00:09:17 | 888 | {"english":"Eight Hundred Eighty-eight","khmer":"ប្រាំបីរយប៉ែកសិបប្រាំបី","dollar":"$0.222"}
+2025-05-27 00:09:31 | 888 | {"english":"Eight Hundred Eighty-eight","khmer":"ប្រាំបីរយប៉ែកសិបប្រាំបី","dollar":"$0.222"}
+2025-05-27 10:29:08 | 12 | {"english":"Twelve","khmer":"ដប់ពីរ","dollar":"$0.003"}

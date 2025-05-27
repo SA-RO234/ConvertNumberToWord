@@ -1,47 +1,97 @@
-<?php
-
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Convert to Number to Word</title>
-    <!-- Taiwind CSS -->
+    <title>Convert Number to Word</title>
     <link rel="stylesheet" href="/src/style/output.css">
+    <!--  font Seam Reap -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Jost:ital,wght@0,100..900;1,100..900&family=Lexend:wght@100..900&family=Noto+Serif+Khmer:wght@100..900&family=Outfit:wght@100..900&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Siemreap&display=swap" rel="stylesheet">
+
+
 </head>
 
-<body class="select-none">
-    <div class="container w-[50%] m-[100px_auto] ">
-        <h1 class="text-[40px] font-bold text-center">Number to Word Caculator</h1>
-        <h1 class="text-center text-[30px] font-bold pb-[3rem]">Convert from <span class="text-red-700">1</span> To <span class="text-red-700">9999</span></h1>
-        <div class="items-end flex justify-center gap-[20px]">
-            <div class="form-group w-full flex-col flex gap-[10px]">
-                <label for="data" class="text-[30px] font-bold">Please Input Your Data : </label>
-                <input class="input"  id="InputField" name="number" placeholder="បញ្ចូលលេខសម្រាប់បំលែង">
+<body>
+    <div class="container">
+        <!-- Fixed Sidebar -->
+        <div id="sidebar">
+            <div class="sidebar-header">
+                <div class="search-container">
+                    <input type="text" placeholder="Search chats" class="search-input">
+                    <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                    <span class="search-shortcut">Ctrl K</span>
+                </div>
             </div>
-            <button class="btn" id="btnconvert" type="button">Convert</button>
+
+            <div class="sidebar-content">
+                <div class="history-section">
+                    <h3>History</h3>
+                    <div id="sidebarHistory">
+                        <div style="color: #9ca3af; font-size: 14px; padding: 12px;">No history yet</div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <h1 class="text-[30px] font-bold pt-[40px] pb-[40px]">Resut : </h1>
-        <div class="result-container  w-full flex flex-col gap-[20px]">
-            <div class="flex w-full jutify-between gap-[10px] items-center">
-                <h1 class="text-[30px] w-[20%] text-red-700 font-bold">English :</h1>
-                <h1 id="english" class="input  Show text-[25px] cursor-text flex justify-start items-center font-normal rounded-[5px]"></h1>
+
+        <!-- Main Content -->
+        <div id="mainContent">
+            <!-- Fixed Header -->
+            <div class="main-header">
+                <div class="header-content">
+                    <button id="toggleSidebar" type="button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 6h18M3 12h18M3 18h18" />
+                        </svg>
+                    </button>
+                    <h1 class="main-title">Number to Word Calculator</h1>
+                </div>
             </div>
-            <div class="flex w-full jutify-between gap-[10px] items-center">
-                <h1 class="text-[30px] w-[20%] text-red-700 font-bold">Khmer :</h1>
-                <h1 id="khmer" class="input text-[25px] cursor-text flex justify-start items-center rounded-[5px]"></h1>
-            </div>
-            <div class="flex w-full jutify-between gap-[10px] items-center">
-                <h1 class="text-[30px] text-red-700  w-[20%] font-bold">Dollar :</h1>
-                <h1 id="dollar" class="input Show text-[25px] cursor-text font-normal flex justify-start items-center rounded-[5px]"></h1>
+
+            <!-- Scrollable Content -->
+            <div id="scrollContent" class="scrollable-content">
+                <div class="content-wrapper">
+                    <!-- Input Section -->
+                    <div class="input-section">
+                        <div class="form-group">
+                            <label for="InputField" class="form-label">Please Input Your Number:</label>
+                            <div class="input-container">
+                                <input class="number-input" type="number" id="InputField" name="number" placeholder="បញ្ចូលលេខសម្រាប់បំលែង" />
+                                <button class="convert-btn" id="btnconvert" type="button">Convert</button>
+                            </div>
+                            <div id="texterror" class="error-message"></div>
+                        </div>
+                    </div>
+
+                    <!-- Results Section -->
+                    <div class="results-section">
+                        <h2 class="results-title">Result:</h2>
+
+                        <div class="result-item">
+                            <div class="result-label">English:</div>
+                            <div id="english" class="result-value"></div>
+                        </div>
+
+                        <div class="result-item">
+                            <div class="result-label">Khmer:</div>
+                            <div id="khmer" class="result-value"></div>
+                        </div>
+
+                        <div class="result-item">
+                            <div class="result-label">Dollar:</div>
+                            <div id="dollar" class="result-value"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </body>
-<!-- JS -->
+<!--  JS -->
 <script src="/src/app.js"></script>
 
 </html>

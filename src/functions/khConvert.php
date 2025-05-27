@@ -14,55 +14,81 @@ class khConvert
         9 => 'ប្រាំបួន'
     ];
 
+    private static $khTens = [
+        1 => 'ដប់',
+        2 => 'ម្ភៃ',
+        3 => 'សាមសិប',
+        4 => 'សែសិប',
+        5 => 'ហាសិប',
+        6 => 'ហុកសិប',
+        7 => 'ចិតសិប',
+        8 => 'ប៉ែកសិប',
+        9 => 'កៅសិប'
+    ];
+
     public static function toKhmerword($number)
     {
-        if (!is_numeric($number)) return '';
-        if ($number == 0) return self::$khNumbers[0];
-        if ($number == 100) return 'មួយរយ';
-
-        $khTens = [
-            1 => 'ដប់',
-            2 => 'ម្ភៃ',
-            3 => 'សាមសិប',
-            4 => 'សែសិប',
-            5 => 'ហាសិប',
-            6 => 'ហុកសិប',
-            7 => 'ចិតសិប',
-            8 => 'ប៉ែកសិប',
-            9 => 'កៅសិប',
-        ];
+        if (!is_numeric($number) || $number < 1 || $number > 99999999) {
+            return 'លេខមិនត្រឹមត្រូវ!';
+        }
 
         $parts = [];
 
-        // Handle thousands
+       
+        if ($number >= 1000000) {
+            $millions = intval($number / 1000000);
+            $parts[] = self::convertBelowThousand($millions) . 'លាន';
+            $number %= 1000000;
+        }
+
+        if ($number >= 100000) {
+            $hundredThousands = intval($number / 100000);
+            $parts[] = self::$khNumbers[$hundredThousands] . 'សែន';
+            $number %= 100000;
+        }
+
+        
+        if ($number >= 10000) {
+            $tenThousands = intval($number / 10000);
+            $parts[] = self::$khNumbers[$tenThousands] . 'មុឺន';
+            $number %= 10000;
+        }
+
+     
         if ($number >= 1000) {
             $thousands = intval($number / 1000);
             $parts[] = self::$khNumbers[$thousands] . 'ពាន់';
-            $number = $number % 1000;
+            $number %= 1000;
+        }
+         
+        if ($number > 0) {
+            $parts[] = self::convertBelowThousand($number);
         }
 
-        //  Handle hundreds 
+        return implode('', $parts);
+    }
+
+    private static function convertBelowThousand($number)
+    {
+        $parts = [];
+
+        
         if ($number >= 100) {
             $hundreds = intval($number / 100);
             $parts[] = self::$khNumbers[$hundreds] . 'រយ';
-            $number = $number % 100;
+            $number %= 100;
         }
 
-        // Handle tens 10 -> 99 
-        if ($number >= 10 && $number < 100) {
+        
+        if ($number >= 10) {
             $tens = intval($number / 10);
             $ones = $number % 10;
-            $tensword = $khTens[$tens];
+            $tensWord = self::$khTens[$tens];
             if ($ones > 0) {
-                $tensword .= self::$khNumbers[$ones];
+                $tensWord .= self::$khNumbers[$ones];
             }
-
-            $parts[] = $tensword;
-            $number = 0;
-        }
-
-        // Handle 1 - 9
-        if ($number > 0 && $number < 10) {
+            $parts[] = $tensWord;
+        } elseif ($number > 0) {
             $parts[] = self::$khNumbers[$number];
         }
 
