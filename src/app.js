@@ -22,16 +22,13 @@ NumberData.addEventListener("input", () => {
 //  Fetch Number from Form
 BtnConvert.addEventListener("click", () => {
   const number = NumberData.value;
-  fetch(
-    "http://localhost/PHP-University/Assingment-Individual/src/api/ConvertAPI.php",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ number: number }),
-    }
-  )
+  fetch("/src/api/ConvertAPI.php", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ number: number }),
+  })
     .then((response) => {
       if (!response.ok) throw new Error("Network response was not ok");
       return response.text();
