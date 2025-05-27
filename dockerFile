@@ -1,0 +1,6 @@
+# Use the official PHP image with Apache
+FROM php:8.3-apache     
+# Copy application files
+COPY ./laragon_new/www/PHP-University/Assingment-Individual/index.php /var/www/html/
+# Set the working directory
+WORKDIR /var/www/PHP-University/Assingment-Individual/index.php
