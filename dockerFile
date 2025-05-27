@@ -1,5 +1,15 @@
-FROM langflowai/langflow:latest
+# Use the official PHP image with Apache
+FROM php:8.3-apache 
+# Enable Apache mod_rewrite (optional, but common for PHP apps)
+RUN a2enmod rewrite
+# Copy application files
+COPY ./public /var/www/html
 
-EXPOSE 7860
+# Set working directory
+WORKDIR /var/www/html
 
-CMD ["langflow", "run", "--host", "0.0.0.0", "--port", "7860"]
+# Set recommended permissions (optional, adjust as needed)
+RUN chown -R www-data:www-data /var/www/html
+
+# Expose port 80 (default for Apache)
+EXPOSE 80
