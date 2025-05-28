@@ -37,7 +37,6 @@ BtnConvert.addEventListener("click", () => {
       let data;
       try {
         data = JSON.parse(text);
-        console.log(data);
       } catch (e) {
         TextError.textContent = "Server error: Invalid JSON response.";
         return;

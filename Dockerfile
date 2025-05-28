@@ -1,19 +1,19 @@
-# Use the official PHP image with Apache
-FROM php:8.3-apache 
-# Enable Apache mod_rewrite (optional, but common for PHP apps)
+# Use official PHP + Apache
+FROM php:8.3-apache
+
+# Enable rewrite
 RUN a2enmod rewrite
-# Create storage directory manually in case not present
+
+# Create and set permissions for the storage folder
 RUN mkdir -p /var/www/html/storage
-# Copy application files
-COPY . /var/www/html
-
-# Set working directory
-WORKDIR /var/www/html
-
-# Set recommended permissions (optional, adjust as needed)
-RUN chown -R www-data:www-data /var/www/html
-# Make sure history.txt has write permission
+COPY storage/history.txt /var/www/html/storage/history.txt
 RUN chmod -R 777 /var/www/html/storage
 
-# Expose port 80 (default for Apache)
+# Copy all app files
+COPY . /var/www/html
+
+# Set permissions
+RUN chown -R www-data:www-data /var/www/html
+
+# Expose port
 EXPOSE 80
