@@ -1,19 +1,20 @@
-# Use official PHP + Apache
 FROM php:8.3-apache
 
-# Enable rewrite
+# Install intl extension
+RUN apt-get update && apt-get install -y libicu-dev \
+    && docker-php-ext-install intl
+
+# Enable Apache mod_rewrite
 RUN a2enmod rewrite
 
-# Create and set permissions for the storage folder
-RUN mkdir -p /var/www/html/storage
-COPY storage/history.txt /var/www/html/storage/history.txt
-RUN chmod -R 777 /var/www/html/storage
-
-# Copy all app files
+# Copy files into the container
 COPY . /var/www/html
 
-# Set permissions
-RUN chown -R www-data:www-data /var/www/html
+# Set working directory
+WORKDIR /var/www/html
 
-# Expose port
+RUN touch /var/www/html/storage/history.txt && \
+    chown www-data:www-data /var/www/html/storage/history.txt
+
+# Expose port 80
 EXPOSE 80
